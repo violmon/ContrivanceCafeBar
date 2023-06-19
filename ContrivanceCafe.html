@@ -1,0 +1,147 @@
+<!Doctype html>
+<html lang="et">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="cafestyle.css">
+		<title>Contrivance cafe</title>
+	</head>
+	<body>
+	<div class="page">
+  <header tabindex="0"> <a href="#photoscroll"><div id="logo"> <img src="logo.png" alt="logo"></div></a></header>
+  <div id="nav-container">
+    <div class="bg"></div>
+    <div class="button" tabindex="0">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div id="nav-content" tabindex="0">
+      <ul>
+        <li><a href="#first">Meist</a></li>
+        <li><a href="#menuBlock">Menüü</a></li>
+        <li><a href="#locationBlock">Asukoht</a></li>
+        <li><a href="#space">Pood</a></li>
+        <li><a href="#second">Üritused</a></li>
+		<li><a href="#footerBlock">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="slide1.png" style="width:100%" alt="slide1">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="slide2.png" style="width:100%" alt="slide2">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="slide3.png" style="width:100%" alt="slide3">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+	</div>	
+	
+		<div id="infoblock">
+			<div class="titleBlock" id="first"> Meist<hr> </div>
+			<div id="aboutBlock">
+			<div id="illustration"> </div> 
+			<div id="textBlock"><p>&nbsp; Kohvik-baari "Contrivance" asutas 1987. aastal John Doe. Algusaastatel Inglismaal tegeles ta aurumasinate arendamisega, kuid kui sai aru, 
+et äri pole enam kasumlik, tekkis tal mõte õppida alkoholi valmistama.</p>
+<p> &nbsp; Kõige sagedamini destilleeris John konjakit ja portveeni. Väga aeglaselt, kuid inimesed said tema ärist teada ja hakkasid tema nime all 
+toodangut ostma. Olles kogunud piisavalt raha, otsustas John avada 
+oma vanas töökojas kohvik-baari, mida ta vaid veidi renoveeris, ja 
+jättis kõik muu niisama. Polnud tahtmist midagi pretensioonikat ja 
+rafineeritud teha, tahtsin lihtsust ja mugavust. Et inimesed naudiksid 
+siin viibimist. Meister ei mõelnud nimele pikka aega, kuna ta lõi masinaid, mehhanisme ja muud, otsustas ta asutuse nimetada “Contrivance”, mis tõlkes tähendab leiutist. Töökojas olid veel vanad töövahendid ja ühel päeval läks üks seade rikki ja Doe ei saanud sellega 
+hakkama, kuid külaline kohvikust aitas teda ja kõik normaliseerus. Ja 
+siis tuli Johnile idee, et mis siis, kui see on selle koha eripära. Nii 
+sündis interaktiivne üritus "Katkine mehhanism".</p>
+<p> &nbsp; Koht kogus populaarsust, siin hakati pidama degusteerimisi, üritusi, 
+pidusid ja isegi sünnipäevi. Tänapäeval jätkab kohvik-baar "Contrivance" arengut ja ei lakka kunagi oma klientidele meeldimisest </p></div>
+			</div>
+				<div id="menuBlock">
+				<div class="pic1" id="salmonPhoto"></div>
+				<div class="pic1" id="pic2"> <a href="Menu.html"> <div id="buttonM"> &nbsp; Menüü</div> </a></div>
+				<div class="pic34" id="saladPhoto"></div>
+				<div class="pic34" id="coffeePhoto"></div>                                                                                         
+				</div>
+			
+			<div class="titleBlock"> Asukoht<hr> </div>
+				<div id="locationBlock">
+					<div id="mapInfo"><h2>Astu läbi</h2> <p class="properties">Tallinna mnt, Narva, Eesti</p> <h2>Oleme avatud:</h2> <p class="properties"> E-N: 10:00-22:00</p> <p class="properties"> R-P: 11:00-00:00</p></div>
+					<a href="https://www.google.com/maps/place/Tallinna+mnt+2,+20304+Narva/@59.3768546,28.1904835,18.75z/data=!4m6!3m5!1s0x46944820d7a7b61b:0x2d167a88555c324b!8m2!3d59.3768029!4d28.190645!16s%2Fg%2F11c1z7qpx4?entry=ttu"><div id="mapPhoto"></div></a>
+				</div>
+			<div class="titleBlock" id="space"> Pood <hr> </div>
+				<div id="productBlock">
+					<div class="products" id="coater"></div>
+					<div class="products" id="keychain"></div>
+					<div class="products" id="pen"></div>
+				</div>	
+				<div id="moreButton"> <a href="Shop.html"> <div id="more"> &nbsp; Rohkem</div></a> </div>
+			<div class="titleBlock" id="second"> Üritused<hr> </div>
+				<div id="posterBlock"> 
+				<div class="poster"></div> <div class="poster"></div> 
+				</div>	
+				<div id="posterBlock2">
+				<div class="posterInfo">Jazz muusika ootab sind!</div>
+				<div class="posterInfo">Jazz muusika ootab sind!</div>
+				</div>
+			<a href="https://www.instagram.com/contrivance.cb/?igshid=OGQ5ZDc2ODk2ZA%3D%3D"><div id="collageBlock"> </div></a> 
+			</div>
+			
+			<div id="footerBlock"> 
+				<div id="contactBlock"> <div id="contact"><h2>Kontakt</h2> <p class="data">Tel. +372 5690 4218</p>  <p class="data"> contrivance.cafe@gmail.com</p> <p class="data"> Tallinna mnt 2, Narva</p> <hr id="slice"></div></div>
+				<div id="iconsBlock">
+				<a href="https://www.instagram.com/contrivance.cb/?igshid=OGQ5ZDc2ODk2ZA%3D%3D"><div id="icon"></div></a>  
+				</div>
+				
+				</div> 
+	</body>
+</html>
